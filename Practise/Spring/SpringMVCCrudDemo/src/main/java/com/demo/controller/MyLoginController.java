@@ -27,16 +27,20 @@ public class MyLoginController {
 	@PostMapping("/validate")
 	public ModelAndView validate(@RequestParam("uname") String unm,@RequestParam String passwd,HttpSession sess) {
 		MyUser u=loginService.validateUser(unm,passwd);
-//		if(u!=null) {
-//			sess.setAttribute("user",u);
-//			return new ModelAndView("redirect:/product/getproducts");
-//		}
-//		return new ModelAndView("success","msg","unsuccessful login");
-//		if{
-			if(unm.equals("admin") && passwd.equals("admin") ) {
-				return new ModelAndView("successAdmin","adminmsg","successful login as Admin");
+			if(unm.equals("admin1") && passwd.equals("admin1")) {
+				sess.setAttribute("user",u);
+//				return new ModelAndView("redirect:/successAdmin.jsp");
+				return new ModelAndView("successAdmin","adminmsg","successful login");
 			}
-			return new ModelAndView("successAdmin","adminmsg","unsuccessful login as Admin");
+			return new ModelAndView("successAdmin","adminmsg","unsuccessful login");
+		
+			
+//		if{
+		/*
+		 * if(unm.equals("admin") && passwd.equals("admin") ) { return new
+		 * ModelAndView("successAdmin","adminmsg","successful login as Admin"); } return
+		 * new ModelAndView("successAdmin","adminmsg","unsuccessful login as Admin");
+		 */
 //		else {
 //			if(unm.equals("user") && passwd.equals("user") ) {
 //				return new ModelAndView("successUser","usermsg","successful login as User");

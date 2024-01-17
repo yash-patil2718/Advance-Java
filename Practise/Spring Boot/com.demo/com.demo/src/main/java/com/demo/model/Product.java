@@ -1,19 +1,26 @@
 package com.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="prodtab11")
 public class Product {
+	@Id
 	private int pid;
 	private String pname;
 	private int qty;
-	private int cost;
+	private double price;
 	public Product() {
 		super();
 	}
-	public Product(int pid, String pname, int qty, int cost) {
+	public Product(int pid, String pname, int qty, double price) {
 		super();
 		this.pid = pid;
 		this.pname = pname;
 		this.qty = qty;
-		this.cost = cost;
+		this.price = price;
 	}
 	public int getPid() {
 		return pid;
@@ -33,17 +40,16 @@ public class Product {
 	public void setQty(int qty) {
 		this.qty = qty;
 	}
-	public int getCost() {
-		return cost;
+	public double getPrice() {
+		return price;
 	}
-	public void setCost(int cost) {
-		this.cost = cost;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	@Override
 	public String toString() {
-		return "Product [pid=" + pid + ", pname=" + pname + ", qty=" + qty + ", cost=" + cost + "]";
+		return "Product [pid=" + pid + ", pname=" + pname + ", qty=" + qty + ", price=" + price + "]";
 	}
-	
 	
 	
 }
