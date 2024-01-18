@@ -7,8 +7,8 @@
   <session-factory>
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <!-- property name="connection.driver_class">com.mysql.jdbc.Driver</property -->
-    <property name="connection.url">jdbc:mysql://192.168.10.150:3306/dac55?useSSL=false</property>
-    <property name="connection.username">dac55</property>
+    <property name="connection.url">jdbc:mysql://192.168.10.150:3306/dac9?useSSL=false</property>
+    <property name="connection.username">dac9</property>
     <property name="connection.password">welcome</property>
     <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
     <property name="connection.pool_size">1</property>

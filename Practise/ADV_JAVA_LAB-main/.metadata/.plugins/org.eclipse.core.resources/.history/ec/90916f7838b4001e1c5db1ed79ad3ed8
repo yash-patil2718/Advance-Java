@@ -1,0 +1,40 @@
+package com.demo.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.model.Address;
+import com.demo.model.MyUser;
+
+public class TestOneToOneBidirectional {
+
+	public static void main(String[] args) {
+		
+		Address ad1 = new Address (1,"GokhaleNagar","Pune");
+		
+		Address ad2 = new Address (2,"ShivajiNagar","Pune");
+		
+		MyUser u1 = new MyUser(01,"Arjun",ad1);
+		
+		MyUser u2 = new MyUser(02,"Prathmesh",ad2);
+		
+		ad1.setU(u1);
+		ad2.setU(u2);
+		
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		Session sess=sf.openSession();
+		Transaction tr=sess.beginTransaction();
+		
+		sess.save(ad1);
+		sess.save(ad2);
+		sess.save(u1);
+		sess.save(u2);
+		
+		tr.commit();
+		
+
+	}
+
+}
