@@ -1,13 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>spring_MVC_CURD_DEMO</groupId>
-  <artifactId>spring_MVC_CURD_DEMO</artifactId>
+  <groupId>SpringMVCCCRUDDemo</groupId>
+  <artifactId>SpringMVCCCRUDDemo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>spring_MVC_CURD_DEMO</name>
-  <description>spring_MVC_CURD_DEMO</description>
-  
-   <properties>
+  <name>SpringMVCCCRUDDemo</name>
+  <description>SpringMVCCCRUDDemo</description>
+  <properties>
 	   <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
 		<spring.version>5.2.8.RELEASE</spring.version>
@@ -87,5 +86,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	
 </project>
