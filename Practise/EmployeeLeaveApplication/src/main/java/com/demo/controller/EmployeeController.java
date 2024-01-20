@@ -10,18 +10,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.demo.model.Student;
-import com.demo.service.StudentService;
+import com.demo.model.Employee;
+import com.demo.services.EmployeeServices;
 
 @Controller
-@RequestMapping("/student")
-public class StudentController {
+@RequestMapping("/leave")
+public class EmployeeController {
 	@Autowired
-	private StudentService sservice;
+	private EmployeeServices eservice;
 	
-	@GetMapping("/getstudents")
-	public ModelAndView getStudents(HttpSession session) {
-		List<Student> slist = sservice.getAllStudents();
-		return new ModelAndView("displaystudent","slist",slist);	
+	@GetMapping("/leaves")
+	public ModelAndView getLeaveDetails(HttpSession session) {
+		List<Employee> elist = eservice.getAllEmployee();
+		return new ModelAndView("employeeleave.jsp","elist",elist);
 	}
+	
+	
 }
